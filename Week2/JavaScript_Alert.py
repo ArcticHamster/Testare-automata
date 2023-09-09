@@ -1,15 +1,17 @@
 import time
+
 import unittest
-from unittest import TestCase
 
 from selenium import webdriver
+
 from selenium.webdriver.common.by import By
 
 from selenium.webdriver.chrome.service import Service
+
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-class TestAlerts(TestCase):
+class TestAlerts(unittest.TestCase):
     LINK = "https://the-internet.herokuapp.com/javascript_alerts"
 
     BUTTON_JS_ALERT_SIMPLE = (By.XPATH, "//button[@onclick='jsAlert()']")

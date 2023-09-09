@@ -1,0 +1,199 @@
+Recapitulare finala - Testare Automata
+
+1.	Alege afirmatiile corecte:
+
+a. HTML este un limbaj prin care se defineste scheletul unei pagini web. A
+b. Structura unei pagini web nu poate fi vizualizata din browser, ci doar din
+interiorul aplicatiei (cod sursa). F
+c. Un element HTML contine tag-uri, marcate cu < si >. A 
+d. In structura HTML a unei pagini web, putem avea elemente HTML care
+contin alte elemente HTML (nested HTML elements). A  
+e. In structura HTML a unei pagini web, nu putem avea elemente HTML. care
+contin alte elemente. F
+HTML (nested HTML elements)
+
+Raspunsuri corecte: a, c, d
+
+2. Selecteaza acei selector care se folosesc exclusiv la identificarea
+elementelor HTML cu tag-ul a (link-uri):
+a. ID 
+b. LINK_TEXT A
+C. XPATH
+d. TAG NAME
+e. PARTIAL_LINK_TEXT A
+
+Raspunsuri corecte: b, e
+
+3. Alege variantele care pot identifica in mod corect urmatorul element HTML:
+<input type="tel" name="phone number" id="form-invoice-payment-phone"
+class="form-invoice-payment-group">
+a. driver.find_element(By.TAG_NAME, "type") F
+b. driver.find_element(By.ID, "form-invoice") F
+c. driver.find_element(By.CLASS_NAME, "form-invoice-payment-group") A
+d. driver.find_element(By.XPATH, //input[@type="tel"])  A
+e. driver.find_element(By.CSS SELECTOR, "#form-invoice-payment-phone") A
+
+CSS
+# cautare dupa id
+. cautare dupa clasa
+
+Raspunsuri corecte: c, d, e
+
+4. Alege variantele care pot identifica in mod corect urmatorul element HTML:
+<button type="submit" class="btn-new btn-fullwidth" data-action="homePayBill">Plateste factura</button>
+
+a. driver.find_element(By.XPATH, "//button[text()='Plateste factura"]") A
+//button[contains(text(), "Plateste factura")]
+//button[contains(text(), "factura")]
+b. driver.find_element(By.CSS_SELECTOR,".btn-new.btn-fullwidth") A
+c. driver.find_element(By.LINK TEXT, "Plateste factura") F
+d. driver.find_element(By.CLASS_NAME, "submit") F
+e. driver.find_element(By.XPATH, "//*[@type='submit']") A
+
+Raspunsuri corecte: a, b, e
+
+5. Alege afirmatile adevarate referitoare la selectori:
+
+a. Cand se foloseste un selector de tip CSS SELECTOR, identificarea unui
+element HTML dupa id se face scriind semnul "." urmat de numele id-ului F
+b. Cand se foloseste un selector de tip CSS_SELECTOR, identificarea unui
+element HTML dupa id se face scriind semmul "#" urmat de numele id-ului. A
+c. Selectorul de tip PARTIAL_LINK_TEXT se foloseste pentru a identifica
+link-urile dintr-o pagina web, folosind doar o partea din textul care se pune
+peste un link. A
+d. XPATH-ul absolut este cel recomandat pentru folosire, si nu XPATH-ul
+relativ. F
+e. XPATH-ul relativ este cel recomandat pentru folosire, si nu XPATH-UL
+absolut. A
+
+Raspunsuri corecte: b, c, e
+
+6. Alege afirmatiile adevarate:
+
+a. Libraria unittest este o librarie care ne ajuta sa ne grupam testele automate in
+clase. A
+b. Pentru ca o clasa sa poata contine teste scrise cu libraria unittest si sa avem
+acces la tote functionalitatile necesare pentru testare, clasa respectiva
+trebuie sa mosteneasca clasa unittest.TestCase A
+c.Libraria unittest se foloseste doar de catre echipa de dezvoltare, pentru
+testarea unitara a codului. F
+d. Testele scrise cu libraria unittest sunt niste metode a carui nume trebuie
+neaparat sa fie prefixat cu test A
+e. La rularea testelor, avem posibilitatea sa sarim intentionat peste un test. A
+
+Raspunsuri corecte: a, b, d, e
+
+
+7. Alege afirmatiile adevarate, referitoare la libraria unittest:
+	
+a. Metoda tearDown() este o metoda care contine tote activitatile pe care
+dorim sa le executam la finalul rularii tuturor testelor dintr-o clasa de teste. F
+b. Metoda tearDown() este o metoda care contine toate activitatile pe care
+dorim sale executam la finalul rularii fiecarui test in parte, intr-o clasa de
+teste. A
+c. Metoda setUp() este o metoda care contine tote activitatile pe care dorim sa
+le executam inaintea executarii fiecarui test in parte. A
+d. Un exemplu de instructiune utila care ar putea fi folosita in metoda de
+setUp() este inchiderea browser-ului. F
+e. Un exemplu de instructiune utila care ar putea fi folosita in metoda de
+setUp() este accesarea paginii web care se doreste a fi testata. A
+
+Raspunsuri corecte: b, c, e
+
+8. Selecteaza afirmatiile adevarate, referitoarea la folosirea timpilor de
+asteptare in identificarea elementelor HTML cu libraria selenium:
+
+a. Implicitly_wait() este o metoda, disponibila pe obiectul driver, prin care
+putem seta un timp de asteptare, in secunde, timp care va fi folosit pentru a
+astepta si reincerca identificarea elementelor HTML. A
+b. Implicitly_wait() seteaza un timp de asteptare pentru toate elementele
+HTML identificate folosind instanta de driver. A
+c. Explicit_wait() face acelasi lucru ca si implicitly_ wait, doar ca timpul de
+asteptare setat poate fi exprimat in minute. F
+d. Wait-urile isi gasesc utilitatea in identificarea elementelor HTML care se
+incarca mai greu, cum ar fi imaginile dintr-o pagina web. A
+e. Daca atat implicit wait cat si explict wait au fost setate pentru acelasi
+element HTML, implicit wait va avea prioritate. F
+
+Raspunsuri corecte: a, b, d
+
+9. Selecteaza afirmatiile adevarate referitoare la explicit wait:
+a. Daca avem un explicit wait setat pe elementul cautat si acesta este gasit, se
+continua timpul de asteptare pana la terminare F
+b. Daca avem un explicit wait setat pe elementul cautat si acesta este gasit,
+timpul de asteptare este intrerupt si se continua codul. A
+c. Daca avem explicit wait setat pe un alt element decat elementul cautat si
+elementul cautat nu va fi gasit, atunci codul va da eroare doar dupa trecerea
+timpului de asteptare. F
+d. Daca avem explicit wait setat pe un element, si elementul nu este gasit pana
+la terminarea timpului de asteptare, vom avea eroare. A
+e. Explicit wait este specific unui singur element. A
+
+Raspunsuri corecte: b, d, e 
+
+10.Selecteaza afirmatiile adevarate:
+a. Metoda find_element() disponibila pe driver, va identifica mereu primul
+element gasit intr-o pagina web, folosind tipul selectorului si selectorul luat
+ca si parametri. A
+b. Daca un element nu este gasit folosind metoda find_element(), atunci vom
+avea o eroare. A
+c. Metoda find_elements disponibila pe driver, va identifica tote elementele
+gasite intr-o pagina web, folosind tipul selectorului si selectorul luat ca si
+parametri, sub forma de lista. A
+d. Metoda find_element() returneaza True daca elementul a fost gasit. F
+e. Pentru a accesa continutul text de pe un WebElement, putem accesa 
+proprietatea text de pe acesta. A
+f. Daca nici un element nu este gasit folosind find_elements() returneaza o lista goala -> [] A
+
+Raspunsuri corecte: a, b, c, e, f
+
+11.Alege afirmatile adevarate:
+a. TDD este prescurtarea de la Test Driven Development. A
+b. TDD reprezinta un proces de dezvoltare software care se bazeaza pe scrierea
+cerintelor de business in teste dupa dezvoltarea codului sursa. F
+c. TDD reprezinta un proces de dezvoltare software care se bazeaza pe scrierea
+cerintelor de business in teste inaintea dezvoltarii codului sursa. A 
+d. Prin utilizarea TDD-ului, codul ajunge sa fie greu de intretinut. A
+e. Un avantaj important al utilizarii TDD-ului este ca duce la o acoperire mai
+mare a aplicatiei prin teste. A
+
+Raspunsuri corecte: a, c, d, e
+
+12.Selecteaza afirmatile adevarate:
+a. BDD este un proces de dezvoltare software derivat din DD care pune un
+accent mai mare asupra scenariilor de testare (user end-to-end features). A
+b. In utilizarea BDD-ului, in Python, se foloseste libraria unittest. F
+c. In utilizarea BDD-ului, in Python, se foloseste libraria behave. A
+d. BDD permite descrierea scenarilor de business in fisiere descriptive, numite
+features files. A 
+e. Un dezavantaj al BDD-ului, este ca scenariile de business nu sunt scrise intr-
+un mod usor de inteles de catre utilizatorii fara cunostiinte tehnice. F
+
+Raspunsuri corecte: a, c, d
+
+13. Selecteaza afirmatiile adevarate:
+a. Gherkin este limbajul descriptiv folosit pentru a descrie scenariile de
+business in BDD. A
+b. GIVEN este un pas dintr-un scenariu BDD prin care se defineste contextul
+testarii scenariului. A
+c. THEN este un pas dintr-un scenariu BDD in care se defines actiunile pe
+care un user trebuie sa le faca pentru a simula scenariul respectiv. F
+d. Background este o caracteristica care se poate gasi intr-un feature file prin
+care putem defini un step de given care sa fie folosit de toate scenarile din
+fisierul respectiv. A 
+e. Scenariile nu pot fi parametrizate. F
+
+Raspunsuri corecte: a, b, d
+
+14.Selecteaza afirmatile adevarate:
+a. Un API este o aplicatie prin care se poate asigura comunicarea intre doua
+sisteme. A
+b. Un API ne expune mai multe endpoint-uri prin care putem interactiona cu
+resursele dintr-o aplicatie. A
+C. Cand facem un request la un endpoint expus de un API, trebuie sa furnizam
+o metoda HTTP. A
+d. In general, cand dorim sa cream o resursa prin intermediul unui request,
+metoda HTTP folosita va fi PUT. F
+e. Status code-urile de tip 4xx ne indica o eroare de server. F
+
+Raspunsuri corecte: a, b, c

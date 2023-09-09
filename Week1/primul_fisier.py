@@ -44,3 +44,4 @@ time.sleep(2)
 driver.back()
 time.sleep(2)
 driver.find_element(By.PARTIAL_LINK_TEXT,'Autoco').click()
+
